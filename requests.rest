@@ -1,0 +1,54 @@
+
+
+// In order to login, user must first create account.
+// User must also use correct password. We can use
+// bcrypt for this.
+POST http://localhost:4000/createAccount
+Content-Type: application/json
+
+{
+  "username": "Ishan", "password" : "test"
+}
+
+###
+
+// Correct login
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "username": "Ishan", "password" : "test"
+}
+
+###
+
+// Incorrect login
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "username": "Ishan", "password" : "test2"
+}
+
+###
+
+POST http://localhost:3000/caesar
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IklzaGFuIiwicGFzc3dvcmQiOiIkMmIkMTAkZjNlZ1RURVR5ZUNNQy8yWVFOMnYwdXJpajVBMjVlNW14YkJuVFBoOVM2bnBJOVpJU2ZxamkiLCJpYXQiOjE2NTY1MjEwNjMsImV4cCI6MTY1NjUyMTQ2M30.0EcgnLzHGRCr7ihNtpTkUx-MIJDyNaDRaMdqtrVzxAY",
+  "message": "aaaa",
+  "shift": 3
+}
+
+
+###
+
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSXNoYW4iLCJpYXQiOjE2NTY1MTQ4MzF9.RqIUhp6JgxxfJdx3989pb4Qdh3ocGEySpYBQRZWLMe4"
+}
+
+###
