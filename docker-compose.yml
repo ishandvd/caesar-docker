@@ -2,15 +2,20 @@ version: '3.8'
 
 services:
   server:
+    working_dir: /caesar-docker
     image: node:12-alpine
     ports:
     - 3000:3000
     command: npm run devStart
+    volumes: 
+      - ./:/caesar-docker
 
   authServer:
+    working_dir: /caesar-docker
     image: node:12-alpine
     ports:
     - 4000:4000
     command: npm run devStartAuth
-
+    volumes: 
+      - ./:/caesar-docker
 

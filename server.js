@@ -6,13 +6,6 @@ const jwt = require('jsonwebtoken')
 
 app.use(express.json())
 
-const posts = [
-  {
-    username: 'Kyle',
-    title: 'Post 1'
-  },
-]
-
 app.post('/caesar', authenticateToken, (req, res) => {
   const message = req.body.message
   const shiftedMessage = []
