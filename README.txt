@@ -1,6 +1,6 @@
 Please run the following to start the servers:
 
-"npm i express nodemon jwt"
+"npm i express nodemon jsonwebtoken"
 
 Then use:
 
